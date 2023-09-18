@@ -23,7 +23,7 @@ This method allows ReShade to be injected as the game launches instead of modify
    
    For example:  
    ``"C:\launch-with-reshade\LaunchWithReShade.exe" "C:\Program Files (x86)\Steam\steamapps\common\Lies of P\LiesofP\Binaries\Win64\LOP-Win64-Shipping.exe" %command%``
-3. This makes Steam start **LaunchWithReShade.exe** and passing the game's executable as an argument.
+3. When launching the game through Steam, it instead starts **LaunchWithReShade.exe** and passes the game's executable as an argument.
 4. A terminal window should appear, wait for the game to start, inject ReShade and then close itself.
 
 **Note**: Putting the **LaunchWithReShade.exe** and other files in the same folder as the game's executable makes it... not work... sometimes (unsure why). So be certain they are in their own folder somewhere else.
