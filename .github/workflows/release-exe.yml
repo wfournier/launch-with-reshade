@@ -1,0 +1,39 @@
+name: Compile Powershell Script to .exe
+run-name: Compile Powershell Script to .exe
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  Run-PS2EXE:
+    name: Run PS2EXE on Windows to compile script to an executable file and include it in a new release
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install PS2EXE module
+        shell: powershell
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module ps2exe
+      - name: Compile to .exe
+        shell: powershell
+        run: |
+          ps2exe LaunchWithReShade.ps1
+      - name: Create release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          release_name: ${{ steps.version.outputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload executable to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./LaunchWithReShade.exe
+          asset_name: LaunchWithReShade.exe
+          asset_content_type: application/exe
