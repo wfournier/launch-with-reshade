@@ -15,7 +15,7 @@ This method allows ReShade to be injected as the game launches instead of modify
 1. Put all the downloaded files in the same folder.
 2. Using your archiver software, open the ReShade installation file as an archive (For 7-Zip, <b>Right click file -> 7-Zip -> Open archive</b>)
 3. Extract **ReShade64.dll** in the folder with all the other files.
-4. If you don't already have shaders from another ReShade installation, you can download a small collection on [crosire's repo](https://github.com/crosire/reshade-shaders) and place them in your game installation folder. If you're missing shaders, I included the **reshade-shaders** folder on this repo which has all of them (either clone the repo or download as a zip and extract the folder). You might also need to specify the shaders and textures locations in the ReShade menu once in game.
+4. If you don't already have shaders from another ReShade installation, you can download them from [here](https://www.mediafire.com/file/fe799nkhkxggf97/reshade-shaders.zip/file) and place them in your game installation folder. You might need to specify the shaders and textures locations in the ReShade menu once in game.
 
 # Usage with Steam games
 1. Open your game's properties window
