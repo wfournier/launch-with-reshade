@@ -1,5 +1,5 @@
-name: Compile Powershell Script to .exe
-run-name: Compile Powershell Script to .exe
+name: Compile and release Powershell script to .exe
+run-name: Compile and release Powershell script to .exe
 on:
   push:
     tags:
