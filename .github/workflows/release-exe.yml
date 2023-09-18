@@ -7,6 +7,7 @@ on:
 jobs:
   Run-PS2EXE:
     name: Run PS2EXE on Windows to compile script to an executable file and include it in a new release
+    permissions: write-all
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
