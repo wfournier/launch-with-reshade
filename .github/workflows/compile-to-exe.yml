@@ -1,0 +1,18 @@
+name: Compile Powershell Script to .exe
+run-name: Compile Powershell Script to .exe
+on: [push]
+jobs:
+  Run-PS2EXE:
+    name: Run PS2EXE on Windows to compile script
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install PS2EXE module
+        shell: powershell
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module ps2exe
+      - name: Compile to .exe
+        shell: powershell
+        run: |
+          ps2exe LaunchWithReShade.ps1
