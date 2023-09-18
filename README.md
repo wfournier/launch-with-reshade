@@ -5,7 +5,7 @@ I made this script because I was having problem installing ReShade on a game usi
 
 This method allows ReShade to be injected as the game launches instead of modifying its files.  
 
-# Pre-requisites
+# Prerequisites
 - Latest release of the executable [here](https://github.com/wfournier/launch-with-reshade/releases/latest). You can alternatively download the source script and use it as is from the terminal or compile it to an executable yourself.
 - File archiver software (i.e. [WinRAR](https://www.win-rar.com/download.html?&L=0), [7-Zip](https://www.7-zip.org/download.html))
 - Latest version of ReShade installation file (Download [here](https://reshade.me/#download))
